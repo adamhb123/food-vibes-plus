@@ -1,4 +1,4 @@
-# ![real logo](https://github.com/maisha242/food-vibes/blob/main/misc/logo.png) food-vibes
+# ![real logo](https://github.com/maisha242/food-vibes/blob/main/misc/logo.png) food-vibes-plus
 Have you ever been hungry but you don't know what to eat? 
 Let us pick for you! 
 Let us listen to what you’re listening to and we'll make suggestions based on your 'vibes'
