@@ -8,7 +8,7 @@
     "jquery": "^3.5.1",
     "lodash": "^4.17.21",
     "morgan": "^1.10.0",
-    "openshift": "^1.0.0",
+    "openshift": "^1.0.0"
   },
   "devDependencies": {
     "axios": "^0.21.1",
