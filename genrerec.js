@@ -3,8 +3,11 @@ var fs = require('fs');
 var crypto = require('crypto');
 //npm install request
 var request = require('request');
-var config = require('../config.js');
-// Replace "###...###" below with your project's host, access_key and access_secret.
+var config;
+if(process.env.ACR_CLOUD_ACCESS_KEY && process.env.ACR_CLOUD_SECRET_KEY){
+	config = {"ACR_CLOUD_ACCESS_KEY": process.env.ACR_CLOUD_ACCESS_KEY, "ACR_CLOUD_SECRET_KEY":process.env.ACR_CLOUD_SECRET_KEY};
+}
+else{config = require('../config.js');}
 var defaultOptions = {
 host: 'identify-us-west-2.acrcloud.com',
   endpoint: '/v1/identify',

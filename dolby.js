@@ -1,6 +1,10 @@
 const fs = require('fs');
 const axios = require('axios').default;
-const APIKEY = require('../config.js').DOLBY_API_KEY;
+if(process.env.DOLBY_API_KEY){
+	config = {"DOLBY_API_KEY":process.env.DOLBY_API_KEY};
+}
+else{config = require('../config.js');}
+const APIKEY = config.DOLBY_API_KEY;
 const file_path = __dirname + '/';
 const output_path = __dirname + '/';
 module.exports = {

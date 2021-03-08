@@ -5,5 +5,6 @@ Save as 'config.js'
 module.exports = {
   DOLBY_API_KEY: '',
   ACR_CLOUD_ACCESS_KEY: '',
-  ACR_CLOUD_SECRET_KEY: ''
+  ACR_CLOUD_SECRET_KEY: '',
+  PORT: 8080
 }
