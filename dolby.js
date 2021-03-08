@@ -9,7 +9,7 @@ const file_path = __dirname + '/';
 const output_path = __dirname + '/';
 module.exports = {
 dl_res: null,
-enhance_file: function(file_name) {
+enhance_file: function(file_name, srvres) {
   let fpfn = file_path + file_name;
   console.log(fpfn);
   let media_input_config = {
@@ -82,6 +82,7 @@ enhance_file: function(file_name) {
             response.data.pipe(fs.createWriteStream(output_path + rname + '-enhanced.' + extension));
             response.data.on('error', function(error) {
               console.log("error downloading, retrying...");
+			  srvres.write(" ");
             });
             response.data.on('end', function() {
               console.log('File downloaded!');
@@ -90,6 +91,7 @@ enhance_file: function(file_name) {
             })
             }).catch(function(error) {
             console.log("error downloading, retrying...");
+			srvres.write(" ");
           });}, 4000)
       }).catch(function(error) {
         console.log(error);

@@ -39,7 +39,7 @@ app.post('/upload-clip', async (req, res) => {
             let clip = req.files.clip;
             console.log(clip);
             clip.mv('./uploads/' + clip.name);
-			dolby.enhance_file('uploads/'+ clip.name);
+			dolby.enhance_file('uploads/'+ clip.name, res);
 			let split = clip.name.split('.');
 			let intId = setInterval(()=>{
 				console.log("Result:"+dolby.dl_res);
