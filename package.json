@@ -16,7 +16,7 @@
 		"request": "^2.88.2"
 	},
 	"devDependencies": {
-		"nodeshift": "^8.1.1",
+		"nodeshift": "^8.1.1"
 	},
 	"scripts": {
 		"openshift": "nodeshift --expose --dockerImage=registry.access.redhat.com/rhscl/ubi8/nodejs-10",
